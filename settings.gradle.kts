@@ -1,2 +1,2 @@
-rootProject.name = "user_document_verification"
+rootProject.name = "document_verification"
 

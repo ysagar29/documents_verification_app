@@ -1,4 +1,6 @@
 plugins {
+    id("org.springframework.boot") version ("3.1.0")
+    id("io.spring.dependency-management") version ("1.1.0")
     id("java")
 }
 
@@ -10,6 +12,16 @@ repositories {
 }
 
 dependencies {
+    implementation ("org.slf4j:slf4j-api:2.0.9")
+    implementation ("org.springframework.boot:spring-boot-starter-logging")
+    implementation ("org.springframework.boot:spring-boot-starter")
+    implementation ("org.springframework.boot:spring-boot-starter-validation")
+    implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation ("org.springframework.boot:spring-boot-starter-web")
+    compileOnly ("org.projectlombok:lombok:1.18.20")
+    annotationProcessor ("org.projectlombok:lombok:1.18.20")
+    implementation("com.google.cloud:google-cloud-vision:3.53.0")
+    runtimeOnly ("com.h2database:h2")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
