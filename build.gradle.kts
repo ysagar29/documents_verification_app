@@ -18,6 +18,7 @@ dependencies {
     implementation ("org.springframework.boot:spring-boot-starter-validation")
     implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation ("org.springframework.boot:spring-boot-starter-web")
+    implementation ("net.sourceforge.tess4j:tess4j:4.5.3")
     compileOnly ("org.projectlombok:lombok:1.18.20")
     annotationProcessor ("org.projectlombok:lombok:1.18.20")
     implementation("com.google.cloud:google-cloud-vision:3.53.0")
