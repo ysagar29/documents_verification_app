@@ -7,7 +7,6 @@ import org.seclore.model.Customer;
 import org.seclore.repository.CustomerRepo;
 import org.seclore.service.OcrService;
 import org.seclore.util.DocumentMatcher;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
