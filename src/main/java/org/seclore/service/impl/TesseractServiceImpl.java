@@ -5,6 +5,7 @@ import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import org.seclore.service.OcrService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 @Service("tesseract")
 @Slf4j
+@Primary
 public class TesseractServiceImpl implements OcrService {
 
     @Override
