@@ -32,9 +32,9 @@ tasks.test {
     useJUnitPlatform()
 }
 
-sonar {
-    properties {
-        property ("sonar.projectKey", "dummy")
-        property ("sonar.qualitygate.wait", true)
-    }
-}
+//sonar {
+//    properties {
+//        property ("sonar.projectKey", "dummy")
+//        property ("sonar.qualitygate.wait", true)
+//    }
+//}
