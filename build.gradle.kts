@@ -2,7 +2,7 @@ plugins {
     id("org.springframework.boot") version ("2.7.5")
     id("io.spring.dependency-management") version ("1.1.0")
     id("java")
-    id ("org.sonarqube") version ("4.0.0.2929")
+    id ("org.sonarqube") version ("6.0.1.5171")
 }
 
 group = "org.seclore"
@@ -30,4 +30,11 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property ("sonar.projectKey", "dummy")
+        property ("sonar.qualitygate.wait", true)
+    }
 }
