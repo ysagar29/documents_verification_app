@@ -21,22 +21,18 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Install Gradle 8.5 (if missing)
+      - name: Install Gradle (if missing)
         run: |
-          if ! command -v gradle &> /dev/null; then
-            echo "Gradle not found, installing Gradle 8.5..."
-            wget https://services.gradle.org/distributions/gradle-8.5-bin.zip -P /tmp
-            sudo unzip -d /opt/gradle /tmp/gradle-8.5-bin.zip
-            echo "export PATH=/opt/gradle/gradle-8.5/bin:\$PATH" | sudo tee /etc/profile.d/gradle.sh
-            source /etc/profile.d/gradle.sh
-            gradle -v
+          if [ ! -f gradlew ]; then
+            echo "Gradle wrapper not found, installing Gradle..."
+            sudo apt update && sudo apt install -y gradle
           fi
 
       - name: Ensure Gradle wrapper exists
         run: |
           if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
             echo "Gradle wrapper is missing. Regenerating..."
-            gradle wrapper  # Generate wrapper using system Gradle
+            gradle wrapper  # Use system Gradle, NOT ./gradlew
           fi
 
       - name: Grant execute permission to Gradle wrapper
