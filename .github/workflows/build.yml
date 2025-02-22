@@ -18,6 +18,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+
+      - name: Grant execute permission to Gradle wrapper
+        run: chmod +x gradlew  # Fixes "Permission denied" issue
+
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
