@@ -1,10 +1,12 @@
 package org.seclore.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Pattern;
+
 import lombok.Data;
 import org.seclore.enums.DocumentVerificationStatus;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Data
