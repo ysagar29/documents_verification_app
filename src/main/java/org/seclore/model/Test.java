@@ -2,10 +2,10 @@ package org.seclore.model;
 
 public class Test {
 
-    private String id;
+    private String ids;
 
     public Test(String id){
-        this.id = id;
+        this.ids = id;
     }
 
 }
