@@ -2,7 +2,7 @@ plugins {
     id("org.springframework.boot") version ("2.7.5")
     id("io.spring.dependency-management") version ("1.1.0")
     id("java")
-    id ("org.sonarqube") version ("6.0.1.5171")
+    id ("org.sonarqube") version ("4.3.0.3225")
 }
 
 group = "org.seclore"
