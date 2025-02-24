@@ -10,7 +10,7 @@ public class Test {
     }
 
     public void TestMethodWithNamingFailure() {
-        // does nothing
+        // Empty Method
     }
 
     public void testMethodWithLoggerIssue() {
